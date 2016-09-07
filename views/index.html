@@ -369,7 +369,7 @@
                 }
 
 
-            }, 20000);
+            }, 3600000);
 
             isStopped = $interval(function() {
                 $scope.counter++;
@@ -383,6 +383,7 @@
             $interval.cancel(check);
             $interval.cancel(status);
             $interval.cancel(retry);
+            $scope.logs = [];
         };
 
     }]);
